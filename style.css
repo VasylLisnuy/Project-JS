@@ -1,0 +1,17 @@
+.countainer {
+    width: 1120px;
+    margin: 0 auto;
+    outline: 1px solid red;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.header .countainer {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
