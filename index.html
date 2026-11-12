@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
         integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -47,31 +50,46 @@
         <div class="countainer">
         <h1 class="main__title">Популярні інетрактивні ігри</h1>
         <div class="main__stick">ㅤ</div>
-        <h3 class="main__subtitle">Перевір в який рік ти народився</h3>
+        <section class="year">
+    <h3 class="main__subtitle">Перевір в який рік ти народився</h3>
+    <div class="year__wrap">
         <form action="" class="main__year">
-        <input type="text" name="year" class="main__inyear" placeholder="Введіть рік народження">
-        <button class="main__btnyear"><img src="./images/lupa.webp" alt="lupa"></button>
+            <input type="text" name="year" class="main__inyear" placeholder="Введіть рік народження">
+            <button class="main__btnyear"><img src="./images/lupa.webp" alt="lupa"></button>
         </form>
-        
         <p class="main__textyear"></p>
+    </div>
+</section>
         <div class="main__stick">ㅤ</div>
-        <h3>Вгадай число, яке загадав комп’ютер</h3>
-        <form action="" class="number">
-        <input type="text" name="num" class="number__innum" placeholder="Введіть число">
-        <button class="number__btnnum"><img src="./images/lupa.webp" alt="lupa"></button>
+        <section class="number">
+    <h3 class="number__title">Вгадай число, яке загадав комп’ютер</h3>
+    <div class="number__wrap">
+        <form action="" class="number__form">
+            <input type="text" name="num" class="number__innum" placeholder="Введіть число">
+            <button class="number__btnnum"><img src="./images/lupa.webp" alt="lupa"></button>
         </form>
         <p class="number__text"></p>
-        <!-- <h3></h3>
-        <button></button>
-        <button></button>
-        <button></button>
-        <p></p>
-        <p></p>
-        <button></button>
-        <h3></h3>
-        <input type="text">
-        <input type="text">
-        <input type="text"> -->
+    </div>
+</section>
+        <div class="main__stick">ㅤ</div>
+        <section class="rps">
+    <h3 class="rps__title">Камінь - ножиці - папір</h3>
+    <div class="rps__top">
+        <ul class="rps__list">
+            <li><button class="rps__btn" data-choice="stone"><img src="./images/stone.png" alt="stone"></button></li>
+            <li><button class="rps__btn" data-choice="scissors"><img src="./images/scissors.png" alt="scissors"></button></li>
+            <li><button class="rps__btn" data-choice="paper"><img src="./images/paper.png" alt="paper"></button></li>
+        </ul>
+        <div class="rps__score">
+            <p>Рахунок:</p>
+            <p>Комп’ютер - <span class="rps__comp">0</span></p>
+            <p>Ви - <span class="rps__user">0</span></p>
+        </div>
+    </div>
+    <p class="rps__text"></p>
+    <button class="rps__compbtn">Варіант комп’ютера</button>
+</section>
+        <div class="main__stick">ㅤ</div>
         </div>
     </main>
     <footer></footer>
