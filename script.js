@@ -137,3 +137,79 @@ rpsCompBtnRef.addEventListener("click", () => {
   }
 });
 
+
+const calcFirstRef = document.querySelector(".calc__first");
+const calcSecondRef = document.querySelector(".calc__second");
+const calcBtnRefs = document.querySelectorAll(".calc__btn");
+const calcEqualRef = document.querySelector(".calc__equal");
+const calcResultRef = document.querySelector(".calc__result");
+
+let operation = "";
+
+calcBtnRefs.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    calcBtnRefs.forEach((item) => {
+      item.classList.remove("calc__active");
+    });
+
+    event.currentTarget.classList.add("calc__active");
+    operation = event.currentTarget.dataset.op;
+  });
+});
+
+calcEqualRef.addEventListener("click", () => {
+  const first = Number(calcFirstRef.value);
+  const second = Number(calcSecondRef.value);
+
+  if (calcFirstRef.value === "" || calcSecondRef.value === "" || isNaN(first) || isNaN(second)) {
+    calcResultRef.textContent = "Помилка";
+    calcResultRef.style.color = "red";
+  } else if (operation === "") {
+    calcResultRef.textContent = "Оберіть дію";
+    calcResultRef.style.color = "red";
+  } else if (operation === "/" && second === 0) {
+    calcResultRef.textContent = "На 0 не можна";
+    calcResultRef.style.color = "red";
+  } else {
+    let result = 0;
+
+    if (operation === "+") {
+      result = first + second;
+    } else if (operation === "-") {
+      result = first - second;
+    } else if (operation === "*") {
+      result = first * second;
+    } else {
+      result = first / second;
+    }
+
+    calcResultRef.textContent = Math.round(result * 100) / 100;
+    calcResultRef.style.color = "black";
+  }
+});
+
+
+const timeFormRef = document.querySelector(".time__form");
+const timeTextRef = document.querySelector(".time__text");
+
+timeFormRef.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const sec = Number(event.currentTarget.elements.sec.value);
+
+  if (!Number.isInteger(sec) || sec < 0) {
+    timeTextRef.textContent = "Введіть кількість секунд!";
+    timeTextRef.style.color = "red";
+  } else {
+    const days = Math.floor(sec / 86400);
+    const hours = Math.floor((sec % 86400) / 3600);
+    const minutes = Math.floor((sec % 3600) / 60);
+    const seconds = sec % 60;
+
+    timeTextRef.textContent = `${days} дн. ${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+    timeTextRef.style.color = "black";
+  }
+
+  event.currentTarget.reset();
+});
+
