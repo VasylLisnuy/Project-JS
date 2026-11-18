@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
         integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -48,79 +48,111 @@
     </header>
     <main>
         <div class="countainer">
-        <h1 class="main__title">Популярні інетрактивні ігри</h1>
-        <div class="main__stick">ㅤ</div>
-        <section class="year">
-    <h3 class="main__subtitle">Перевір в який рік ти народився</h3>
-    <div class="year__wrap">
-        <form action="" class="main__year">
-            <input type="text" name="year" class="main__inyear" placeholder="Введіть рік народження">
-            <button class="main__btnyear"><img src="./images/lupa.webp" alt="lupa"></button>
-        </form>
-        <p class="main__textyear"></p>
-    </div>
-</section>
-        <div class="main__stick">ㅤ</div>
-        <section class="number">
-    <h3 class="number__title">Вгадай число, яке загадав комп’ютер</h3>
-    <div class="number__wrap">
-        <form action="" class="number__form">
-            <input type="text" name="num" class="number__innum" placeholder="Введіть число">
-            <button class="number__btnnum"><img src="./images/lupa.webp" alt="lupa"></button>
-        </form>
-        <p class="number__text"></p>
-    </div>
-</section>
-        <div class="main__stick">ㅤ</div>
-        <section class="rps">
-    <h3 class="rps__title">Камінь - ножиці - папір</h3>
-    <div class="rps__top">
-        <ul class="rps__list">
-            <li><button class="rps__btn" data-choice="stone"><img src="./images/stone.png" alt="stone"></button></li>
-            <li><button class="rps__btn" data-choice="scissors"><img src="./images/scissors.png" alt="scissors"></button></li>
-            <li><button class="rps__btn" data-choice="paper"><img src="./images/paper.png" alt="paper"></button></li>
-        </ul>
-        <div class="rps__score">
-            <p>Рахунок:</p>
-            <p>Комп’ютер - <span class="rps__comp">0</span></p>
-            <p>Ви - <span class="rps__user">0</span></p>
+            <h1 class="main__title">Популярні інетрактивні ігри</h1>
+            <div class="main__stick">ㅤ</div>
+            <section class="year">
+                <h3 class="main__subtitle">Перевір в який рік ти народився</h3>
+                <div class="year__wrap">
+                    <form action="" class="main__year">
+                        <input type="text" name="year" class="main__inyear" placeholder="Введіть рік народження">
+                        <button class="main__btnyear"><img src="./images/lupa.webp" alt="lupa"></button>
+                    </form>
+                    <p class="main__textyear"></p>
+                </div>
+            </section>
+            <div class="main__stick">ㅤ</div>
+            <section class="number">
+                <h3 class="number__title">Вгадай число, яке загадав комп’ютер</h3>
+                <div class="number__wrap">
+                    <form action="" class="number__form">
+                        <input type="text" name="num" class="number__innum" placeholder="Введіть число">
+                        <button class="number__btnnum"><img src="./images/lupa.webp" alt="lupa"></button>
+                    </form>
+                    <p class="number__text"></p>
+                </div>
+            </section>
+            <div class="main__stick">ㅤ</div>
+            <section class="rps">
+                <h3 class="rps__title">Камінь - ножиці - папір</h3>
+                <div class="rps__top">
+                    <ul class="rps__list">
+                        <li><button class="rps__btn" data-choice="stone"><img src="./images/stone.png"
+                                    alt="stone"></button></li>
+                        <li><button class="rps__btn" data-choice="scissors"><img src="./images/scissors.png"
+                                    alt="scissors"></button></li>
+                        <li><button class="rps__btn" data-choice="paper"><img src="./images/paper.png"
+                                    alt="paper"></button></li>
+                    </ul>
+                    <div class="rps__score">
+                        <p>Рахунок:</p>
+                        <p>Комп’ютер - <span class="rps__comp">0</span></p>
+                        <p>Ви - <span class="rps__user">0</span></p>
+                    </div>
+                </div>
+                <p class="rps__text"></p>
+                <button class="rps__compbtn">Варіант комп’ютера</button>
+            </section>
+            <div class="main__stick">ㅤ</div>
+            <section class="calc">
+                <h3 class="calc__title">Калькулятор</h3>
+                <div class="calc__wrap">
+                    <input type="text" class="calc__first" placeholder="Введіть число">
+                    <ul class="calc__list">
+                        <li><button class="calc__btn" data-op="+">+</button></li>
+                        <li><button class="calc__btn" data-op="*">*</button></li>
+                        <li><button class="calc__btn" data-op="-">-</button></li>
+                        <li><button class="calc__btn" data-op="/">/</button></li>
+                    </ul>
+                    <input type="text" class="calc__second" placeholder="Введіть число">
+                    <button class="calc__equal">=</button>
+                    <p class="calc__result">Результат</p>
+                </div>
+            </section>
+            <div class="main__stick">ㅤ</div>
+            <section class="time">
+                <h3 class="time__title">Калькулятор часу</h3>
+                <div class="time__wrap">
+                    <form action="" class="time__form">
+                        <input type="text" name="sec" class="time__insec" placeholder="Введіть число">
+                        <button class="time__btnsec"><img src="./images/lupa.webp" alt="lupa"></button>
+                    </form>
+                    <img src="./images/line.svg" alt="line" class="time__line">
+                    <p class="time__text">0 дн. 00:00:00</p>
+                </div>
+            </section>
+            <div class="main__stick">ㅤ</div>
         </div>
-    </div>
-    <p class="rps__text"></p>
-    <button class="rps__compbtn">Варіант комп’ютера</button>
-</section>
-        <div class="main__stick">ㅤ</div>
-        <section class="calc">
-    <h3 class="calc__title">Калькулятор</h3>
-    <div class="calc__wrap">
-        <input type="text" class="calc__first" placeholder="Введіть число">
-        <ul class="calc__list">
-            <li><button class="calc__btn" data-op="+">+</button></li>
-            <li><button class="calc__btn" data-op="*">*</button></li>
-            <li><button class="calc__btn" data-op="-">-</button></li>
-            <li><button class="calc__btn" data-op="/">/</button></li>
-        </ul>
-        <input type="text" class="calc__second" placeholder="Введіть число">
-        <button class="calc__equal">=</button>
-        <p class="calc__result">Результат</p>
-    </div>
-</section>
-        <div class="main__stick">ㅤ</div>
-        <section class="time">
-    <h3 class="time__title">Калькулятор часу</h3>
-    <div class="time__wrap">
-        <form action="" class="time__form">
-            <input type="text" name="sec" class="time__insec" placeholder="Введіть число">
-            <button class="time__btnsec"><img src="./images/lupa.webp" alt="lupa"></button>
-        </form>
-        <img src="./images/line.svg" alt="line" class="time__line">
-        <p class="time__text">0 дн. 00:00:00</p>
-    </div>
-</section>
-        <div class="main__stick">ㅤ</div>
-        </div>
+
+        <section>
+            <div class="countainer">
+                <ul class="list__scientis">
+                </ul>
+                <ul class="btnlist__scientis">
+                    <li><button type="button" data-action="weak" class="btn__scientis">Які вчені народилися в 19
+                            ст.</button></li>
+                    <li><button type="button" data-action="year_albert" class="btn__scientis">Знайти рік народження Albert
+                            Einshtein</button></li>
+                    <li><button type="button" data-action="sort_al" class="btn__scientis">Відсортувати вчених за
+                            алфавітом</button></li>
+                    <li><button type="button" data-action="last_name_C" class="btn__scientis">Знайти вчених, прізвища яких
+                            починаються на на літеру “С” </button></li>
+                    <li><button type="button" data-action="sort_years" class="btn__scientis">Відсортувати вчених за кількістю
+                            прожитих років</button></li>
+                    <li><button type="button" data-action="del_A" class="btn__scientis">Видалити всіх вчених, ім’я яких
+                            починається на “А”</button></li>
+                    <li><button type="button" data-action="search_last" class="btn__scientis">Знайти вченого, який народився
+                            найпізніше</button></li>
+                    <li><button type="button" data-action="search_soyear" class="btn__scientis">Знайти вченого, який прожив найдовше
+                            і вченого,
+                            який прожив найменше</button></li>
+                    <li><button type="button" data-action="search_coincides" class="btn__scientis">Знайти вчених, в яких співпадають
+                            перші літери імені і прізвища</button></li>
+                </ul>
+            </div>
+        </section>
     </main>
     <footer></footer>
+
     <script type="module" src="./script.js"></script>
 </body>
 
