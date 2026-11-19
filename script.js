@@ -28,7 +28,7 @@ slideRef.addEventListener("click", (event) => {
   } else {
     imageRef.src = "./images/sun.webp";
     checkRef.style.backgroundColor = "white"
-     mainRef.style.backgroundColor = "white"
+    mainRef.style.backgroundColor = "white"
   }
 });
 
@@ -66,7 +66,7 @@ numFormRef.addEventListener("submit", (event) => {
   const compNum = Math.floor(Math.random() * 10) + 1;
 
 
-  
+
 
   if (isNaN(userNum) || userNum < 1 || userNum > 10) {
     numTextRef.textContent = "Введіть число від 1 до 10!";
@@ -218,96 +218,96 @@ const scientisRef = document.querySelector(".list__scientis")
 const buttonRef = document.querySelectorAll(".btn__scientis")
 
 
-const scientists = [ 
-    { 
-        name: "Albert", 
-        surname: "Einstein", 
-        born: 1879, 
-        dead: 1955, 
-        id: 1 
-    }, 
-    { 
-        name: "Isaac", 
-        surname: "Newton", 
-        born: 1643, 
-        dead: 1727, 
-        id: 2 
-    }, 
-    { 
-        name: "Galileo", 
-        surname: "Galilei", 
-        born: 1564, 
-        dead: 1642, 
-        id: 3 
-    }, 
-    { 
-        name: "Marie", 
-        surname: "Curie", 
-        born: 1867, 
-        dead: 1934, 
-        id: 4 
-    }, 
-    { 
-        name: "Johannes", 
-        surname: "Kepler", 
-        born: 1571, 
-        dead: 1630, 
-        id: 5 
-    }, 
-    { 
-        name: "Nicolaus", 
-        surname: "Copernicus", 
-        born: 1473, 
-        dead: 1543, 
-        id: 6 
-    }, 
-    { 
-        name: "Max", 
-        surname: "Planck", 
-        born: 1858, 
-        dead: 1947, 
-        id: 7 
-    }, 
-    { 
-        name: "Katherine", 
-        surname: "Blodgett", 
-        born: 1898, 
-        dead: 1979, 
-        id: 8 
-    }, 
-    { 
-        name: "Ada", 
-        surname: "Lovelace", 
-        born: 1815, 
-        dead: 1852, 
-        id: 9 
-    }, 
-    { 
-        name: "Sarah E.", 
-        surname: "Goode", 
-        born: 1855, 
-        dead: 1905, 
-        id: 10 
-    }, 
-    { 
-        name: "Lise", 
-        surname: "Meitner", 
-        born: 1878, 
-        dead: 1968, 
-        id: 11 
-    }, 
-    { 
-        name: "Hanna", 
-        surname: "Hammarström", 
-        born: 1829, 
-        dead: 1909, 
-        id: 12 
-    } 
+const scientists = [
+  {
+    name: "Albert",
+    surname: "Einstein",
+    born: 1879,
+    dead: 1955,
+    id: 1
+  },
+  {
+    name: "Isaac",
+    surname: "Newton",
+    born: 1643,
+    dead: 1727,
+    id: 2
+  },
+  {
+    name: "Galileo",
+    surname: "Galilei",
+    born: 1564,
+    dead: 1642,
+    id: 3
+  },
+  {
+    name: "Marie",
+    surname: "Curie",
+    born: 1867,
+    dead: 1934,
+    id: 4
+  },
+  {
+    name: "Johannes",
+    surname: "Kepler",
+    born: 1571,
+    dead: 1630,
+    id: 5
+  },
+  {
+    name: "Nicolaus",
+    surname: "Copernicus",
+    born: 1473,
+    dead: 1543,
+    id: 6
+  },
+  {
+    name: "Max",
+    surname: "Planck",
+    born: 1858,
+    dead: 1947,
+    id: 7
+  },
+  {
+    name: "Katherine",
+    surname: "Blodgett",
+    born: 1898,
+    dead: 1979,
+    id: 8
+  },
+  {
+    name: "Ada",
+    surname: "Lovelace",
+    born: 1815,
+    dead: 1852,
+    id: 9
+  },
+  {
+    name: "Sarah E.",
+    surname: "Goode",
+    born: 1855,
+    dead: 1905,
+    id: 10
+  },
+  {
+    name: "Lise",
+    surname: "Meitner",
+    born: 1878,
+    dead: 1968,
+    id: 11
+  },
+  {
+    name: "Hanna",
+    surname: "Hammarström",
+    born: 1829,
+    dead: 1909,
+    id: 12
+  }
 ];
 
 function renderScientists(array) {
-  const item = array.map(({name, surname, born, dead, id}) => {
-    return`<li class="item__scientis">
+  const item = array.map(({ name, surname, born, dead, id }) => {
+    return `<li class="item__scientis">
     <h2 class="title__scientis">${name} ${surname}</h2>
     <p class="title__scientis">${born}-${dead}</p>
 </li>`
@@ -321,39 +321,102 @@ renderScientists(scientists)
 
 
 buttonRef.forEach((button) => {
-button.addEventListener("click", (event) => {
-const action = event.target.dataset.action;
-switch(action){
-  case "weak":
-    console.log("Які вчені народилися в 19 ст")
-    break;
-    case "year_albert":
-    console.log("Знайти рік народження Albert Einshtein")
-    break;
-    case "sort_al":
-    console.log("Відсортувати вчених за алфавітом")
-    break;
-    case "last_name_C":
-    console.log("Знайти вчених, прізвища яких починаються на на літеру “С” ")
-    break;
-    case "sort_years":
-    console.log("Відсортувати вчених за кількістю прожитих років")
-    break;
-    case "del_A":
-    console.log("Видалити всіх вчених, ім’я яких починається на “А”")
-    break;
-    case "search_last":
-    console.log("Знайти вченого, який народився найпізніше")
-    break;
-    case "search_soyear":
-    console.log("Знайти вченого, який прожив найдовше і вченого, який прожив найменше")
-    break;
-    case "search_coincides":
-    console.log("Знайти вчених, в яких співпадають перші літери імені і прізвища")
-    break;
-    default:
-      return
-}
-  
+  button.addEventListener("click", (event) => {
+    const action = event.target.dataset.action;
+    switch (action) {
+      case "weak":
+        const res = scientists.filter((item) => item.born >= 1800 && item.born <= 1899)
+        renderScientists(res)
+        break;
+      case "year_albert":
+        const res1 = scientists.filter((item) => item.name === "Albert")
+        renderScientists(res1)
+        break;
+      case "sort_al":
+        const res2 = [...scientists].sort((a, b) => a.name.localeCompare(b.name))
+        renderScientists(res2)
+        break;
+      case "last_name_C":
+        const res3 = scientists.filter((item) => item.surname.startsWith("C"))
+        renderScientists(res3)
+        break;
+      case "sort_years":
+       const res4 = [...scientists].sort((a, b) => (a.dead - a.born) - (b.dead - b.born))
+       renderScientists(res4)
+        break;
+      case "del_A":
+        const res5 = scientists.filter((item) => !item.name.startsWith("A"))
+        renderScientists(res5)
+        break;
+      case "search_last":
+        const res6 = [...scientists].sort((a, b) => b.born - a.born)[0]
+        renderScientists([res6])
+        break;
+      case "search_soyear":
+        const res7 = [...scientists].sort((a, b) => (b.dead - b.born) - (a.dead - a.born))
+        renderScientists([res7[0], res7[res7.length - 1]])
+        break;
+      case "search_coincides":
+        const res8 = scientists.filter((item) => item.name[0] === item.surname[0] )
+        renderScientists(res8)
+        break;
+      default:
+        return
+    }
+
+  })
 })
-})  
+
+
+// photo — посилання або шлях до фото (якщо порожньо — сірий квадрат)
+const team = [
+  { name: "Мурчик", text: "Тімлід. Лежить на дивані й пильно стежить, щоб усі працювали", photo: "https://placecats.com/neo/300/300" },
+  { name: "Пушинка", text: "Тестувальниця. Своїми зеленими очима помічає кожен баг", photo: "https://placecats.com/millie/300/300" },
+  { name: "Сірко і Смужка", text: "Парне програмування: один пише код, а інший спить поруч", photo: "https://placecats.com/millie_neo/300/300" },
+  { name: "Бананчик", text: "Відповідає за безпеку — гризе все підозріле, особливо банани", photo: "https://placecats.com/neo_banana/300/300" },
+  { name: "Белла", text: "Дизайнерка. Сидить рівненько і стежить, щоб відступи були як у Figma", photo: "https://placecats.com/bella/300/300" },
+  { name: "Ожинка", text: "Нічна розробниця. Пухнаста, темна і кодить після опівночі", photo: "https://placecats.com/poppy/300/300" },
+  { name: "Рижик", text: "Відповідає за ігри на сайті — ловить мишку з першої спроби", photo: "https://placecats.com/louie/300/300" }
+];
+
+const teamListRef = document.querySelector(".team__list");
+const teamDotsRef = document.querySelector(".team__dots");
+const teamPrevRef = document.querySelector(".team__prev");
+const teamNextRef = document.querySelector(".team__next");
+
+let currentSlide = 0;
+
+teamListRef.innerHTML = team.map(({ name, text, photo }) => {
+  const img = photo ? `<img src="${photo}" alt="${name}">` : "";
+  return `<li class="team__item">
+    <div class="team__photo">${img}</div>
+    <h4 class="team__name">${name}</h4>
+    <p class="team__text">${text}</p>
+  </li>`;
+}).join("");
+
+teamDotsRef.innerHTML = team.map((_, index) => {
+  return `<li><button type="button" class="team__dot" data-index="${index}"></button></li>`;
+}).join("");
+
+const teamDotRefs = document.querySelectorAll(".team__dot");
+
+function showSlide(index) {
+  currentSlide = (index + team.length) % team.length;
+  teamListRef.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+  teamDotRefs.forEach((dot, i) => {
+    dot.classList.toggle("team__dot--active", i === currentSlide);
+  });
+}
+
+teamPrevRef.addEventListener("click", () => showSlide(currentSlide - 1));
+teamNextRef.addEventListener("click", () => showSlide(currentSlide + 1));
+
+teamDotRefs.forEach((dot) => {
+  dot.addEventListener("click", (event) => {
+    showSlide(Number(event.currentTarget.dataset.index));
+  });
+});
+
+showSlide(0);
